@@ -33,7 +33,7 @@ public:
   CTargetSubtargetInfo(const TargetMachine &TM, const Triple &TT, StringRef CPU,
                        StringRef FS)
 #if LLVM_VERSION_MAJOR >= 9
-      : TargetSubtargetInfo(TT, CPU, FS, ArrayRef<SubtargetFeatureKV>(),
+      : TargetSubtargetInfo(TT, CPU, CPU, FS, ArrayRef<SubtargetFeatureKV>(),
                             ArrayRef<SubtargetSubTypeKV>(), nullptr, nullptr,
                             nullptr, nullptr, nullptr, nullptr),
 #else
